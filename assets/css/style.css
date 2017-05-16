@@ -45,9 +45,9 @@ span.navbarBrand {
 
 div.timer {
   background-color: lime;
-  height: 100px;
-  width: 250px;
-  display: flex;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
 }
 
 section {
