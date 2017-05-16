@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Sans:400i');
+
+body {
+  background-color: black;
+  color: slategrey;
+}
+
+main {
+  font-family: font-family: 'Josefin Sans';
+  display: flex;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative';
+  font-size: 5em;
+  justify-content: center;
+  padding: 1em;
+}
+
+p {
+  flex-direction: column;
+  margin: 20px;
+  padding: 1em;
+}
