@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Sans:400i');
 
+article {
+  display: flex;
+}
+
 body {
   background: black url(../images/space.jpg) no-repeat fixed;
   color: slategrey;
@@ -45,9 +49,8 @@ span.navbarBrand {
 
 div.timer {
   background-color: lime;
-  height: 150px;
   width: 150px;
-  padding: 10px;
+  display: flex;
 }
 
 section {
