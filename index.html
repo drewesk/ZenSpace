@@ -10,7 +10,9 @@
   <!-- Local CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -25,7 +27,20 @@
     </div>
   </nav>
   <main>
-    <h3 class="center">Welcome back, <span id='cachedName'>enter name below.</span></h3>
+    <h3 class="center">Welcome<span id='cachedName'>!</span></h3>
+
+    <article>
+      <form class="form" id="userNameForm">
+        <div class="form-group">
+          <label class='userName' for="name">Enter a User Name</label>
+          <input type="text" class="form-control" id="userName" data-length="20">
+        </div>
+        <button type="submit" class="btn btn-default">
+          Save
+        </button>
+      </form>
+    </article>
+
     <article>
       <img src="./assets/images/asteroid.png" alt="asteroid" height="150px" width="150px">
       <aside>
@@ -35,30 +50,40 @@
         </p>
       </aside>
     </article>
-    <article>
-      <form class="form" id="userNameForm">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="userName" placeholder="Enter your name...">
-        </div>
-        <button type="submit" class="btn btn-default">
-          Save
-        </button>
-      </form>
-    </article>
 
-      <div class="timer">
-        <section id="minutes" class="minutes"></section>
-        <small>Minutes</small>
-        <section id="seconds" class="seconds"></section>
-        <small>Seconds</small>
-      </div>
+    <div class="timer">
+      <section id="minutes" class="minutes"></section>
+      <small>Minutes</small>
+      <section id="seconds" class="seconds"></section>
+      <small>Seconds</small>
+    </div>
 
-      <button id='startTimer' type="button" name="button"></button>
+<form id='meditationOptions'>
+  <label>Sound</label>
+  <select id='soundOptions' class="browser-default">
+    <option disabled selected>Select a Style</option>
+    <option id='focusInput' data-icon="images/sample-1.jpg" class="left circle">Focus(guided by Sam Harris)</option>
+    <option id='relaxInput' data-icon="images/office.jpg" class="left circle">Relax</option>
+    <option id='energyInput' data-icon="images/yuna.jpg" class="left circle">Energize</option>
+  </select>
 
-      <button id='focusButton' type="button" name="button">Focus(guided meditation without music)</button>
-      <button id="relaxButton" type="button" name="button">Relax</button>
-      <button id='energyButton' type="button" name="button">Energy</button>
+  <div id='timeOptions' class="timeOptions">
+      <input id='5' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio"/>
+      <label for='5'>5min</label>
+
+      <input id='10' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio"/>
+      <label for='10'>10min</label>
+
+      <input id='15' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio"/>
+      <label for='15'>15min</label>
+  </div>
+  <!-- <button id='submitOptions' class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right"></i>
+  </button> -->
+  <button class="btn waves-effect waves-light" id="submitOptions">Meditate</button>
+</form>
+
+
 
 
 
@@ -88,19 +113,17 @@
         © 2017 Andrew Eskenazi, All Rights Reserved
       </small>
     </div>
+  </footer>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js" type="text/javascript"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" type="text/javascript"></script>
 
-    <!-- soundcloud sdk -->
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+  <!-- soundcloud sdk -->
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 
-    <!-- Local JS -->
-    <script src="./assets/js/soundcloud-config.js" type="text/javascript"></script>
-    <script src="./assets/js/app.js" type="text/javascript"></script>
-    <script src="./assets/js/timer.js" type="text/javascript"></script>
+  <!-- Local JS -->
+  <!-- <script src="./assets/js/NASA_GET.js" type="text/javascript"></script> -->
+  <script src="./assets/js/app.js" type="text/javascript"></script>
 </body>
 
 </html>
