@@ -53,6 +53,11 @@ small {
   color: white;
 }
 
+span.bold {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
 span.navbarBrand {
   font-family: 'Cinzel Decorative';
   color: black;
