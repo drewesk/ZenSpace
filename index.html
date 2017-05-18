@@ -27,30 +27,33 @@
     </div>
   </nav>
   <main>
-    <h3 class="center">Welcome<span id='cachedName'>!</span></h3>
+    <div id='inSession'>
+      <h3 class="center">Welcome<span id='cachedName'>!</span></h3>
 
-    <article>
-      <form class="form" id="userNameForm">
-        <div class="form-group">
-          <label class='userName' for="name">Enter a User Name</label>
-          <input type="text" class="form-control" id="userName" data-length="20">
-        </div>
-        <button type="submit" class="btn btn-default">
+      <article>
+        <form class="form" id="userNameForm">
+          <div class="form-group">
+            <label class='userName' for="name">Enter a User Name</label>
+            <input type="text" class="form-control" id="userName" data-length="20">
+          </div>
+          <button type="submit" class="btn btn-default">
           Save
         </button>
-      </form>
-    </article>
+        </form>
+      </article>
 
-    <article>
-      <img id="spacePopulate" src="./assets/images/asteroid.png" alt="asteroid" height="150px" width="150px">
-    </article>
+      <article>
+        <img src="./assets/images/asteroid.png" alt="asteroid" height="150px" width="150px">
+      </article>
+    </div>
 
-    <div class="timer">
+    <div class="timer card-panel hoverable #4527a0 deep-purple darken-3">
       <section id="minutes" class="minutes"></section>
       <small>Minutes</small>
       <section id="seconds" class="seconds"></section>
       <small>Seconds</small>
     </div>
+
 
     <form class="card-panel hoverable #4527a0 deep-purple darken-3" id='meditationOptions'>
       <select id='soundOptions' class="browser-default">
@@ -79,7 +82,7 @@
   </main>
   <footer class="page-footer #1a237e indigo darken-4">
     <div class="center">
-      <small>
+      <small class="copyright">
         © 2017 Andrew Eskenazi, All Rights Reserved
       </small>
     </div>

@@ -23,7 +23,7 @@ h3{
 }
 
 img {
-  margin-top: -80px;
+  align-self: flex-end;
 }
 
 label {
@@ -62,10 +62,6 @@ span.navbarBrand {
   box-shadow: -10px -5px 60px 15px black;
 }
 
-/*.form {
-  align-self: flex-end;
-}*/
-
 .timeOptions {
   display: flex;
   flex-direction: row-reverse;
@@ -91,13 +87,18 @@ transform: scale(.5);
 /*Timer*/
 
 div.timer {
-  background-color: blue;
   width: 150px;
+  height: 50px;
   display: flex;
 }
 
 section {
   background-color: lightblue;
-  height: 40px;
-  width: 100px;
+  height: 20px;
+}
+
+/*Copyright*/
+
+small.copyright{
+  font-size: 15px;
 }

@@ -42,6 +42,8 @@ function timerStart(minutes) {
       clearInterval(timerInterval);
       alert('Meditation Complete!');
       $('#meditationOptions').show();
+
+      location.reload();
     }
 
     if (totalSeconds % 60 > 0) {
@@ -60,6 +62,7 @@ let $submit = $('#submitOptions');
 
 $submit.click(function(event) {
   event.preventDefault();
+
   startMeditation();
 
   // for (var i = 0; i < spaceImages.length; i++) {
@@ -72,7 +75,8 @@ $submit.click(function(event) {
           $('body').css('background', 'url(' + spaceImages[count] + ')');
         }, i * 10000);
     })(i);
-}
+  }
+
 
 });
 
@@ -87,16 +91,19 @@ function startMeditation() {
         focusSelection();
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
+        $('#inSession').hide(4000);
         break;
       case "Relax":
         relaxSelection();
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
+        $('#inSession').hide(4000);
         break;
       case "Energize":
         energizeSelection();
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
+        $('#inSession').hide(4000);
         break;
       default:
         alert('Not all options selected.');
