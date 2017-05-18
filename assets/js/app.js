@@ -55,6 +55,18 @@ function timerStart(minutes) {
   }, 1000);
 }
 
+// NASA Images
+
+function backgroundRefresh() {
+  for (var i = 1; i < spaceImages.length; i++) {
+    (function(count) {
+        setTimeout(function() {
+          $('body').css('background', 'url(' + spaceImages[count] + ')');
+        }, i * 10000);
+    })(i);
+  }
+}
+
 // Meditation Form
 
 let $submit = $('#submitOptions');
@@ -69,13 +81,6 @@ $submit.click(function(event) {
   //   spaceTimeout(i);
   // }
 
-  for (var i = 1; i < spaceImages.length; i++) {
-    (function(count) {
-        setTimeout(function() {
-          $('body').css('background', 'url(' + spaceImages[count] + ')');
-        }, i * 10000);
-    })(i);
-  }
 
 
 });
@@ -92,18 +97,21 @@ function startMeditation() {
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);
+        backgroundRefresh()
         break;
       case "Relax":
         relaxSelection();
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);
+        backgroundRefresh()
         break;
       case "Energize":
         energizeSelection();
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);
+        backgroundRefresh()
         break;
       default:
         alert('Not all options selected.');

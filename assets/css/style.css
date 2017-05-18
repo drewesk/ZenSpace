@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Sans:400i');
-
-article{
-  margin: 20px;
-}
-
 body {
   display: flex;
   background: black url(../images/space.jpg) no-repeat fixed;
@@ -17,13 +12,21 @@ h3, small, p {
   font-family: 'Josefin Sans';
 }
 
-h3{
+h3 {
   color: orange;
   margin-top: 100px;
 }
 
-img {
-  align-self: flex-end;
+img.asteroid {
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+
+img.guru {
+  height: 50%;
+  width: 90%;
+  float: right;
 }
 
 label {
@@ -37,7 +40,7 @@ label.userName {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
   flex: 1 0 auto;
 }
 
@@ -67,27 +70,48 @@ span.navbarBrand {
   box-shadow: -10px -5px 60px 15px black;
 }
 
+
+/*Forms*/
+
+.form-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+/*User Options*/
+
 .timeOptions {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+  max-width: 45%;
 }
 
-[type="radio"].with-gap:checked + label:before {
-border-radius: 50%;
-border: 2px solid orange;
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-top: -206px;
+  width: 50%;
 }
 
-[type="radio"].with-gap:checked + label:after {
-border-radius: 50%;
-border: 2px solid orange;
-background-color: #0277bd;
-z-index: 0;
--webkit-transform: scale(.5);
--moz-transform: scale(.5);
--ms-transform: scale(.5);
--o-transform: scale(.5);
-transform: scale(.5);
+[type="radio"].with-gap:checked+label:before {
+  border-radius: 50%;
+  border: 2px solid orange;
 }
+
+[type="radio"].with-gap:checked+label:after {
+  border-radius: 50%;
+  border: 2px solid orange;
+  background-color: #0277bd;
+  z-index: 0;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -ms-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+}
+
 
 /*Timer*/
 
@@ -95,6 +119,7 @@ div.timer {
   width: 150px;
   height: 50px;
   display: flex;
+  justify-content: space-between;
 }
 
 section {
@@ -102,8 +127,10 @@ section {
   height: 20px;
 }
 
+
 /*Copyright*/
 
-small.copyright{
+small.copyright {
+  color: #FCA940;
   font-size: 15px;
 }
