@@ -5,3 +5,41 @@
 // .then(function(NASAdata) {
 //   console.log(NASAdata);
 // });
+
+spaceImages = [];
+
+jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
+
+var settings = {
+  "url": "https://images-api.nasa.gov/search?q=milky",
+  "method": "GET",
+}
+
+$.ajax(settings).done(function (response) {
+  let nasaItemsArray = response.collection.items;
+
+  for (var i = 0; i < nasaItemsArray.length; i++) {
+    if ((nasaItemsArray[i].links[0].href.slice(-3)) == 'jpg'){
+      spaceImages.push(nasaItemsArray[i].links[0].href);
+    }
+  }
+});
+
+console.log(spaceImages);
+
+// function spaceTimeout(i) {
+//   setTimeout(function() {
+//     $('#spacePopulate').attr('src', spaceImages[i]);
+//  }, 3000);
+// }
+
+
+//
+//
+// function updateSpaceCard(imageUrl) {
+//   $('#spacePopulate').attr('src') = imageUrl;
+// }

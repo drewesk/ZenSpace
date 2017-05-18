@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Josefin+Sans:400i');
 
+article{
+  margin: 20px;
+}
+
 body {
   display: flex;
   background: black url(../images/space.jpg) no-repeat fixed;
@@ -15,10 +19,11 @@ h3, small, p {
 
 h3{
   color: orange;
+  margin-top: 100px;
 }
 
 img {
-  float: left;
+  margin-top: -80px;
 }
 
 label {
@@ -64,6 +69,23 @@ span.navbarBrand {
 .timeOptions {
   display: flex;
   flex-direction: row-reverse;
+}
+
+[type="radio"].with-gap:checked + label:before {
+border-radius: 50%;
+border: 2px solid orange;
+}
+
+[type="radio"].with-gap:checked + label:after {
+border-radius: 50%;
+border: 2px solid orange;
+background-color: #0277bd;
+z-index: 0;
+-webkit-transform: scale(.5);
+-moz-transform: scale(.5);
+-ms-transform: scale(.5);
+-o-transform: scale(.5);
+transform: scale(.5);
 }
 
 /*Timer*/

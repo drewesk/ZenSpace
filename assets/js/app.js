@@ -19,7 +19,7 @@ function saveUserName(event) {
   const userName = $('#userName').val();
   localStorage.userName = userName;
 
-  $('#userNameForm').hide();
+  $('#userNameForm').hide(3000);
   location.reload();
 }
 
@@ -27,8 +27,6 @@ function saveUserName(event) {
 
 let totalSeconds = 60;
 let timerInterval = null;
-
-
 
 function timerStart(minutes) {
   let endTime = moment().add(minutes, 'minutes');
@@ -57,15 +55,25 @@ function timerStart(minutes) {
 
 // Meditation Form
 
-
-// let preferences = [];
-
 let $submit = $('#submitOptions');
 
 
 $submit.click(function(event) {
   event.preventDefault();
   startMeditation();
+
+  // for (var i = 0; i < spaceImages.length; i++) {
+  //   spaceTimeout(i);
+  // }
+
+  for (var i = 1; i < spaceImages.length; i++) {
+    (function(count) {
+        setTimeout(function() {
+          $('body').css('background', 'url(' + spaceImages[count] + ')');
+        }, i * 10000);
+    })(i);
+}
+
 });
 
 function startMeditation() {
@@ -78,17 +86,17 @@ function startMeditation() {
       case "Focus(guided by Sam Harris)":
         focusSelection();
         timerStart($timeOption);
-        $('#meditationOptions').hide();
+        $('#meditationOptions').hide(4000);
         break;
       case "Relax":
         relaxSelection();
         timerStart($timeOption);
-        $('#meditationOptions').hide();
+        $('#meditationOptions').hide(4000);
         break;
       case "Energize":
         energizeSelection();
         timerStart($timeOption);
-        $('#meditationOptions').hide();
+        $('#meditationOptions').hide(4000);
         break;
       default:
         alert('Not all options selected.');
@@ -97,6 +105,7 @@ function startMeditation() {
     alert('Not all options selected.');
   }
 }
+
 // SoundCloud Config
 
 SC.initialize({
