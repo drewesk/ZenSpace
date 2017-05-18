@@ -3,7 +3,8 @@ function randomQuote() {
     .then(function(response) {
       console.log(response);
 
-      $("#random_quote").text();
+      $("#random_quote").text(response.quoteText);
+      $("#quote_author").text("-" + response.quoteAuthor + "-");
     });
 }
 

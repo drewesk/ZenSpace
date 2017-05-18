@@ -24,9 +24,9 @@ img.asteroid {
 }
 
 img.guru {
+  float: right;
   height: 50%;
   width: 90%;
-  float: right;
 }
 
 label {
@@ -45,16 +45,18 @@ main {
 }
 
 p {
-  font-size: 20px;
-  flex-direction: column;
+  font-size: 15px;
   margin: 20px;
-  padding: 1em;
+  max-width: 310px;
+  max-height: 100px;
 }
 
 small {
   font-size: 10px;
   color: white;
 }
+
+/*Nav Bar*/
 
 span.bold {
   font-weight: bolder;
@@ -81,18 +83,25 @@ span.navbarBrand {
 
 /*User Options*/
 
+.items {
+  display: flex;
+}
+
+.card-panel{
+  padding: 10px;
+}
+
 .timeOptions {
   display: flex;
   flex-direction: column-reverse;
-  max-width: 45%;
 }
 
 .contentCard {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  float: right;
-  margin-top: -206px;
-  width: 50%;
+  padding: 10px !important;
 }
 
 [type="radio"].with-gap:checked+label:before {

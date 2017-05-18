@@ -60,24 +60,30 @@
       <option id='relaxInput' class="left circle">Relax</option>
       <option id='energyInput' class="left circle">Energize</option>
     </select>
-        <div id='timeOptions' class="timeOptions card-panel hoverable #7e57c2 deep-purple lighten-1">
-          <input id='5' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
-          <label for='5'>5min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
 
-          <input id='10' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
-          <label for='10'>10min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
+    <div class="row items">
+      <div id='timeOptions' class="timeOptions card-panel hoverable #7e57c2 deep-purple lighten-1 col s6">
+        <input id='5' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
+        <label for='5'>5min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
 
-          <input id='15' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
-          <label for='15'>15min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
-          <img class="guru" src="./assets/images/guru.jpg" alt="Guru!">
-        </div>
+        <input id='10' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
+        <label for='10'>10min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
 
-        <div class="contentCard card-panel hoverable #7e57c2 deep-purple lighten-1">
-          content
-        </div>
+        <input id='15' class="with-gap #ff8f00 amber darken-3" name="timeGroup" type="radio" />
+        <label for='15'>15min<img src="./assets/images/icon.svg.med.png" height='10px' width='10px'></label>
+        <img class="guru" src="./assets/images/guru.jpg" alt="Guru!">
+      </div>
 
-    <div class="quoteOptions card-panel hoverable #0091ea light-blue accent-4">
-      <p id='random_quote'></p>
+      <div class="contentCard card-panel hoverable #0097a7 cyan darken-2 col s6">
+        <img class="nebula" src="https://images-assets.nasa.gov/image/PIA13451/PIA13451~thumb.jpg" alt="Unsplash It" height="150px" width="150">
+      </div>
+    </div>
+
+
+    <div class="card-panel hoverable #0091ea light-blue accent-4">
+      <p quoteOptions id='random_quote'></p>
+      <p quoteOptions id='quote_author'></p>
+
       <button class='waves-effect waves-light btn' id='random-quote' type="button" name="button">Get Quote</button>
     </div>
 
