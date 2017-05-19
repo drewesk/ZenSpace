@@ -62,6 +62,7 @@ function backgroundRefresh() {
     (function(count) {
         setTimeout(function() {
           $('body').css('background', 'url(' + spaceImages[count] + ')');
+          // $('div.carousel').append($('<a class="carousel-item" href="#"><img src="' + spaceImages[count] + '"></a>'));
         }, i * 10000);
     })(i);
   }
@@ -94,6 +95,7 @@ function startMeditation() {
     switch ($soundOption) {
       case "Focus(guided by Sam Harris)":
         focusSelection();
+        $('div.timer').show(2000).css('display', 'flex');
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);
@@ -101,6 +103,7 @@ function startMeditation() {
         break;
       case "Relax":
         relaxSelection();
+        $('div.timer').show(2000).css('display', 'flex');
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);
@@ -108,6 +111,7 @@ function startMeditation() {
         break;
       case "Energize":
         energizeSelection();
+        $('div.timer').show(2000).css('display', 'flex');
         timerStart($timeOption);
         $('#meditationOptions').hide(4000);
         $('#inSession').hide(4000);

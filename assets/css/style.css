@@ -13,7 +13,6 @@ h3, small, p {
 }
 
 h3 {
-  color: orange;
   margin-top: 100px;
 }
 
@@ -112,7 +111,7 @@ span.navbarBrand {
 [type="radio"].with-gap:checked+label:after {
   border-radius: 50%;
   border: 2px solid orange;
-  background-color: #0277bd;
+  background-color: #salmon;
   z-index: 0;
   -webkit-transform: scale(.5);
   -moz-transform: scale(.5);
@@ -121,14 +120,14 @@ span.navbarBrand {
   transform: scale(.5);
 }
 
-
 /*Timer*/
 
 div.timer {
+  display: flex;
   width: 150px;
   height: 50px;
-  display: flex;
   justify-content: space-between;
+  display: none;
 }
 
 section {
@@ -136,10 +135,17 @@ section {
   height: 20px;
 }
 
-
 /*Copyright*/
 
 small.copyright {
-  color: #FCA940;
+  color: slategrey;
   font-size: 15px;
+}
+
+/*About*/
+
+div.about {
+  display: flex;
+  max-width: 300px;
+  min-height: 215px;
 }

@@ -25,6 +25,8 @@ $.ajax(settings).done(function (response) {
 
 console.log(spaceImages);
 
+
+
 // function spaceTimeout(i) {
 //   setTimeout(function() {
 //     $('#spacePopulate').attr('src', spaceImages[i]);
